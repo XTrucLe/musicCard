@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="music-card">
+    <img src="imgs/Hinh-nen-4K-1.webp" alt="Music">
+    <h3 class="nameSong">Ten Bai Hat</h3>
+    <!-- Countdown time play a song -->
+    <div class="timeCountdown">
+      <div id="countdown" class="countdown">00:00</div>
+      <div class="progress">
+        <div id="progressBar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+          aria-valuemax="100"></div>
+      </div>
+    </div>
+    <!--Setting a Song-->
+    <div class="songSetting">
+      <button class="loveSong">
+        <span class="heart"><ion-icon name="heart-outline"></ion-icon></span>
+        <span class="redHeart"><ion-icon name="heart"></ion-icon></span>
+      </button>
+      <button class="prevButton">
+        <span><ion-icon name="play-back-sharp"></ion-icon></span>
+      </button>
+      <button class="playButton" onclick="toggleCountdown()">
+        <span id="play">
+          <ion-icon name="play"></ion-icon>
+        </span>
+        <span id="pause">
+          <ion-icon name="pause"></ion-icon>
+        </span>
+      </button>
+
+      <button class="prevButton">
+        <span><ion-icon name="play-forward-sharp"></ion-icon></span>
+      </button>
+      <button class="shareSong">
+        <span><ion-icon name="share-social-outline"></ion-icon></span>
+      </button>
+    </div>
+  </div>
+  <script src="type.js"></script>
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

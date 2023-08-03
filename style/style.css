@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS cho thẻ nhạc */
+.music-card {
+  display: grid;
+  place-items: center;
+  width: 250px;
+  height: 300px;
+  min-width: 200px;
+  position: relative;
+  background-color: #7a7373;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.music-card img {
+  width: 100%;
+  height: 120px;
+  border-radius: 5px;
+}
+#sliderTime {
+  width: 100%;
+  color: white;
+}
+.nameSong {
+  font-size: larger;
+  margin: 20px 0 -10px 0;
+}
+.timeCountdown {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background: #9b9696;
+  margin: 10px 0 0;
+  padding: 2px;
+}
+.timeCountdown .countdown {
+  text-align: center;
+  width: 10%;
+  margin: 0 5px;
+}
+.timeCountdown .progress {
+  width: 75%;
+  height: 5px;
+  overflow: hidden;
+  border: 1px solid #000000;
+
+  background: #494949;
+}
+.timeCountdown .progress #progressBar{
+  height: inherit;
+  transition:.3s linear all ;
+  background-color: aliceblue;
+}
+.timeCountdown .progress:hover #progressBar{
+  transform: scaleY(1.1) ;
+
+}
+.songSetting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  background: rgb(247, 247, 247);
+  margin-bottom: 20px;
+}
+.music-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 1.4em;
+  cursor: pointer;
+  background: none;
+}
+.songSetting span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.playButton #play {
+  display: flex;
+}
+.playButton.active #play {
+  display: none;
+}
+.playButton #pause {
+  display: none;
+}
+.playButton.active #pause {
+  display: flex;
+}
+/* like song setup */
+.loveSong {
+  display: flex;
+}
+.loveSong:active{
+  color: #4caf50;
+}
+.loveSong .heart {
+  display: flex;
+}
+.loveSong.active .heart {
+  display: none;
+}
+.loveSong .redHeart {
+  display: none;
+}
+.loveSong.active .redHeart {
+  display: flex;
+  color: #ff0000;
+}
