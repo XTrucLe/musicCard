@@ -63,16 +63,15 @@ loveBtn.addEventListener("click", () => {
 function setProgressBar() {
     const valueProgress = document.querySelector('#progressBar');
     let current_value = parseInt(valueProgress.getAttribute("aria-valuenow"));
-    if (current_value > 100) {
+    if (current_value >= 1) {
         return;}
         else{
-        // current_value = countdownInterval / secondsRemaining;
-        current_value++
+        current_value = countdownInterval / secondsRemaining;
+
         console.log(current_value)
-        const progressBar=document.getElementById('#progressBar')
+        const progressBar=document.getElementById('progressBar')
         progressBar.ariaValueNow= current_value;
-        // progressBar.textContent = 'Hoàn thành ' + current_value + ' %';
-        // progressBar.style.width = current_value + '%';
+        progressBar.style.width = (current_value*100) + '%';
     }
 
 }
